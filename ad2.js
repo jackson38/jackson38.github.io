@@ -62,13 +62,13 @@ function do_go(){
         go = true;
     }
     else{
-        if(current_hour >= 20 && current_hour <= 22 && current_time-old_time > 120000){
+        if(current_hour >= 20 && current_hour <= 22 && current_time-old_time > 60000){
             go = true;
         }
-        else if(current_hour >= 22 && current_hour < 23 && current_time-old_time > 60000){
+        else if(current_hour >= 22 && current_hour < 23 && current_time-old_time > 30000){
             go = true;
         }
-        else if(current_hour >= 23 && current_time-old_time > 30000){
+        else if(current_hour >= 23 && current_time-old_time > 10000){
             go = true;
         }
         else if(current_hour <= 2){
