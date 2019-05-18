@@ -27,17 +27,18 @@ function insert_ad(current_time){
     var ad_650_200 = '<div><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://jackson38.github.io/ad_img/650_200.gif"></a></div>';
     var ad_1100_75 = '<div><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://jackson38.github.io/ad_img/1100_75.gif"></a></div>';
     if(location.href.match(/\/\/www.chexun.com\/\d{4}\-\d{2}\-\d{2}\/\d{9}\.html/ig)){
-        $(".cx_5_43").attr("style","display:none;"); //790_90
-        $(".cx_5_43").before(ad_790_90);
-        $(".cx_5_42").attr("style","display:none;"); //1100_75
-        $(".cx_5_42").before(ad_1100_75);
+        // $(".cx_5_43").attr("style","display:none;"); //790_90
+        // $(".cx_5_43").before(ad_790_90);
+        $(".news-title").after(ad_790_90);
+        // $(".cx_5_42").attr("style","display:none;"); //1100_75
+        // $(".cx_5_42").before(ad_1100_75);
     }
     else if(location.href.match(/\/\/www.chaichefang.com\/\d{4}\-\d{2}\-\d{2}\/\d{9}\.html/ig)){
         $(".p-bread-nav").before(ad_1100_75);
     }
     else if(location.href.match(/\/\/auto.chexun.com\/[\w-]*\//ig)){
-        $(".cx_2_37").attr("style","display:none;"); //1100_75
-        $(".cx_2_37").before(ad_1100_75);
+        // $(".cx_2_37").attr("style","display:none;"); //1100_75
+        // $(".cx_2_37").before(ad_1100_75);
         $(".auto-head.clearfix").before('<div class="pictab"><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://jackson38.github.io/ad_img/1100_75.gif"></a></div>');
     }
     else if(location.href.match(/\/\/car.chexun.com\/qctupian\/[\w-]+\.html/ig)){
