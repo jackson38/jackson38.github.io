@@ -23,9 +23,9 @@ function check_address(data){
 }
 
 function insert_ad(current_time){
-    var ad_790_90 = '<div><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="http://www.xiangudu.com/large/005BYqpggy1g35s8wwjtxg30i205k40b.jpg"></a></div>';
-    var ad_650_200 = '<div><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="http://www.xiangudu.com/large/005BYqpggy1g35s9lyv2fg30ly02iq41.jpg"></a></div>';
-    var ad_1100_75 = '<div><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="http://www.xiangudu.com/large/005BYqpggy1g35s9qnsccg30uk023wfq.jpg"></a></div>';
+    var ad_790_90 = '<div><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://jackson38.github.io/ad_img/790_90.gif"></a></div>';
+    var ad_650_200 = '<div><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://jackson38.github.io/ad_img/650_200.gif"></a></div>';
+    var ad_1100_75 = '<div><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://jackson38.github.io/ad_img/1100_75.gif"></a></div>';
     if(location.href.match(/\/\/www.chexun.com\/\d{4}\-\d{2}\-\d{2}\/\d{9}\.html/ig)){
         $(".cx_5_43").attr("style","display:none;"); //790_90
         $(".cx_5_43").before(ad_790_90);
@@ -38,10 +38,10 @@ function insert_ad(current_time){
     else if(location.href.match(/\/\/auto.chexun.com\/[\w-]*\//ig)){
         $(".cx_2_37").attr("style","display:none;"); //1100_75
         $(".cx_2_37").before(ad_1100_75);
-        $(".auto-head.clearfix").before('<div class="pictab"><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="http://www.xiangudu.com/large/005BYqpggy1g35s9qnsccg30uk023wfq.jpg"></a></div>');
+        $(".auto-head.clearfix").before('<div class="pictab"><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://jackson38.github.io/ad_img/1100_75.gif"></a></div>');
     }
     else if(location.href.match(/\/\/car.chexun.com\/qctupian\/[\w-]+\.html/ig)){
-        $(".x-img-select.clearfix").before('<div class="pictab"><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="http://www.xiangudu.com/large/005BYqpggy1g35s9qnsccg30uk023wfq.jpg"></a></div>');
+        $(".x-img-select.clearfix").before('<div class="pictab"><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://jackson38.github.io/ad_img/1100_75.gif"></a></div>');
     }
     else{
         return;
