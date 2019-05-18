@@ -38,6 +38,7 @@ function insert_ad(current_time){
     else if(location.href.match(/\/\/auto.chexun.com\/[\w-]*\//ig)){
         $(".cx_2_37").attr("style","display:none;"); //1100_75
         $(".cx_2_37").before(ad_1100_75);
+        $(".auto-head.clearfix").before('<div class="pictab"><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://jackson38.github.io/ad_img/1100_75.gif"></a></div>');
     }
     else if(location.href.match(/\/\/car.chexun.com\/qctupian\/[\w-]+\.html/ig)){
         $(".x-img-select.clearfix").before('<div class="pictab"><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://jackson38.github.io/ad_img/1100_75.gif"></a></div>');
