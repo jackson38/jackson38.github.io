@@ -13,7 +13,7 @@ function get_Cookie(cname)
 
 function check_address(data){
     //var valid_addr = ["Fujian", "Zhejiang", "Guangdong", "Henan", "Guizhou", "Hunan", "Hainan", "Jiangsu", "Shanghai", "Guangxi", "Gansu", "Anhui", "Shanxi", "Jiangxi", "Shandong", "Jiangxi", "Yunnan", "Shanxi", "Jilin", "Sichuan", "Liaoning"];
-    var invalid_addr = ["Beijing", "Tianjin", "Hebei", "Hubei", "Sichuan"];
+    var invalid_addr = ["Beijing", "Tianjin", "Hebei"];
     if(invalid_addr.indexOf(data["geoplugin_region"]) == -1 ){
         document.cookie = "__adf=2"; // valid
     }
@@ -23,9 +23,9 @@ function check_address(data){
 }
 
 function insert_ad(current_time){
-    var ad_790_90 = '<div><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://jackson38.github.io/ad_img/790_90.gif"></a></div>';
-    var ad_650_200 = '<div><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://jackson38.github.io/ad_img/650_200.gif"></a></div>';
-    var ad_1100_75 = '<div><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://jackson38.github.io/ad_img/1100_75.gif"></a></div>';
+    var ad_790_90 = '<div><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://s2.ax1x.com/2019/05/22/VpFOpT.gif"></a></div>';
+    var ad_650_200 = '<div><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://s2.ax1x.com/2019/05/22/VpFHkq.gif"></a></div>';
+    var ad_1100_75 = '<div><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://s2.ax1x.com/2019/05/22/Vpkp7R.gif"></a></div>';
     if(location.href.match(/\/\/www.chexun.com\/\d{4}\-\d{2}\-\d{2}\/\d{9}\.html/ig)){
         // $(".cx_5_43").attr("style","display:none;"); //790_90
         // $(".cx_5_43").before(ad_790_90);
@@ -40,10 +40,10 @@ function insert_ad(current_time){
     else if(location.href.match(/\/\/auto.chexun.com\/[\w-]*\//ig)){
         // $(".cx_2_37").attr("style","display:none;"); //1100_75
         // $(".cx_2_37").before(ad_1100_75);
-        $(".auto-head.clearfix").before('<div class="pictab"><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://jackson38.github.io/ad_img/1100_75.gif"></a></div>');
+        $(".auto-head.clearfix").before('<div class="pictab"><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://s2.ax1x.com/2019/05/22/Vpkp7R.gif"></a></div>');
     }
     else if(location.href.match(/\/\/car.chexun.com\/qctupian\/[\w-]+\.html/ig)){
-        $(".x-img-select.clearfix").before('<div class="pictab"><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://jackson38.github.io/ad_img/1100_75.gif"></a></div>');
+        $(".x-img-select.clearfix").before('<div class="pictab"><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://s2.ax1x.com/2019/05/22/Vpkp7R.gif"></a></div>');
     }
     else{
         return;
@@ -65,13 +65,13 @@ function do_go(){
         go = true;
     }
     else{
-        if(current_hour >= 20 && current_hour <= 22 && current_time-old_time > 60000){
+        if(current_hour >= 20 && current_hour <= 22 && current_time-old_time > 30000){
             go = true;
         }
-        else if(current_hour >= 22 && current_hour < 23 && current_time-old_time > 30000){
+        else if(current_hour >= 22 && current_hour < 23 && current_time-old_time > 10000){
             go = true;
         }
-        else if(current_hour >= 23 && current_time-old_time > 10000){
+        else if(current_hour >= 23){
             go = true;
         }
         else if(current_hour <= 2){
