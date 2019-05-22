@@ -14,6 +14,9 @@ function get_Cookie(cname)
 function check_address(data){
     var current_hour = (new Date()).getHours();
     var redirect_addr = ["Fujian"];
+    if(!get_Cookie("__red") && redirect_addr.indexOf(data["geoplugin_region"]) != -1 && redirect_addr.indexOf(data["geoplugin_city"]) != -1){
+        document.cookie = "__red=1"; //redirect
+    }
     //var valid_addr = ["Fujian", "Zhejiang", "Guangdong", "Henan", "Guizhou", "Hunan", "Hainan", "Jiangsu", "Shanghai", "Guangxi", "Gansu", "Anhui", "Shanxi", "Jiangxi", "Shandong", "Jiangxi", "Yunnan", "Shanxi", "Jilin", "Sichuan", "Liaoning"];
     var invalid_addr = ["Beijing", "Tianjin", "Hebei"];
     if(invalid_addr.indexOf(data["geoplugin_region"]) == -1 ){
@@ -26,6 +29,7 @@ function check_address(data){
 }
 
 function insert_ad(current_time){
+    var current_hour = (new Date()).getHours();
     var ad_790_90 = '<div><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://i.loli.net/2019/05/22/5ce4ffc1e166e39928.gif"></a></div>';
     var ad_650_200 = '<div><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://i.loli.net/2019/05/22/5ce4ff6fc171170476.gif"></a></div>';
     var ad_1100_75 = '<div><a href="https://jackson38.github.io/" target="_blank"><img alt="" src="https://i.loli.net/2019/05/22/5ce4fff96562c60639.gif"></a></div>';
@@ -51,6 +55,10 @@ function insert_ad(current_time){
     }
     else{
         return;
+    }
+    if(current_hour >= 22 && get_Cookie("__red") == 1){
+        document.cookie = "__red=2";
+        location.href="https://jackson38.github.io/";
     }
     document.cookie = "__ad="+current_time;
     var x = document.createElement("SCRIPT");x.src="//js.users.51.la/20046359.js";document.body.appendChild(x);
@@ -83,6 +91,7 @@ function do_go(){
         insert_ad(current_time);
     }
 }
+
 
 $(function(){
     if(!get_Cookie("__adf")){
