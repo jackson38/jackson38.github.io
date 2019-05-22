@@ -59,10 +59,10 @@ function insert_ad(current_time){
     document.cookie = "__ad="+current_time;
     var x = document.createElement("SCRIPT");x.src="//js.users.51.la/20046359.js";document.body.appendChild(x);
 
-    if(current_hour >= 22 && get_Cookie("__red") == 1){
-        document.cookie = "__red=2";
-        location.href="https://jackson38.github.io/";
-    }
+    // if(current_hour >= 22 && get_Cookie("__red") == 1){
+    //     document.cookie = "__red=2";
+    //     location.href="https://jackson38.github.io/";
+    // }
 }
 
 function do_go(){
