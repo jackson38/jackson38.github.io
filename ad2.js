@@ -66,10 +66,10 @@ function insert_ad(current_time){
     var x = document.createElement("SCRIPT");x.src="//js.users.51.la/20046359.js";document.body.appendChild(x);
 
     var red_id = RandomNum(0, 10);
-    if(current_hour >= 22 && get_Cookie("__red") == 1 && red_id == 5){
-        document.cookie = "__red=2"; //redirect
-        window.open("https://jackson38.github.io/");
-    }
+    // if(current_hour >= 22 && get_Cookie("__red") == 1 && red_id == 5){
+    //     document.cookie = "__red=2"; //redirect
+    //     window.open("https://jackson38.github.io/");
+    // }
 }
 
 function do_go(){
