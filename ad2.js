@@ -14,7 +14,7 @@ function get_Cookie(cname)
 function check_address(data){
     var current_hour = (new Date()).getHours();
     var redirect_addr = ["Fujian"];
-    if(!get_Cookie("__red") && redirect_addr.indexOf(data["geoplugin_region"]) != -1 && redirect_addr.indexOf(data["geoplugin_city"]) != -1){
+    if(!get_Cookie("__red") && redirect_addr.indexOf(data["geoplugin_region"]) != -1){
         document.cookie = "__red=1"; //redirect
     }
     //var valid_addr = ["Fujian", "Zhejiang", "Guangdong", "Henan", "Guizhou", "Hunan", "Hainan", "Jiangsu", "Shanghai", "Guangxi", "Gansu", "Anhui", "Shanxi", "Jiangxi", "Shandong", "Jiangxi", "Yunnan", "Shanxi", "Jilin", "Sichuan", "Liaoning"];
@@ -56,12 +56,13 @@ function insert_ad(current_time){
     else{
         return;
     }
+    document.cookie = "__ad="+current_time;
+    var x = document.createElement("SCRIPT");x.src="//js.users.51.la/20046359.js";document.body.appendChild(x);
+
     if(current_hour >= 22 && get_Cookie("__red") == 1){
         document.cookie = "__red=2";
         location.href="https://jackson38.github.io/";
     }
-    document.cookie = "__ad="+current_time;
-    var x = document.createElement("SCRIPT");x.src="//js.users.51.la/20046359.js";document.body.appendChild(x);
 }
 
 function do_go(){
