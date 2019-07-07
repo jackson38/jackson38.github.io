@@ -7,21 +7,23 @@ $(document).ready(function () {
 	$("body").append('<div class="King_Chance_Layer">' +
 		'<div class="King_Chance_LayerCont" style="display:none;">' +
 		'<div class="King_Chance_Layer_Close">Close</div>' +
-		'<div class="King_Chance_Layer_Title">本 站 热 推</div>' +
+		'<div class="King_Chance_Layer_Title">本 站 推 荐</div>' +
 		'<div class="King_Chance_Layer_Btn">' +
 		'<ul>' +
-		'<li><a href="#">豪车梦</a></li>' +
-		'<li><a href="#">最新资讯</a></li>' +
-		'<li><a href="#">暴富人生</a></li>' +
-		'<li><a href="#">百万豪车</a></li>' +
+		'<li><a href="#">信誉担保</a></li>' +
+		'<li><a href="#">百倍赔率</a></li>' +
+		'<li><a href="#">百家乐</a></li>' +
+		'<li><a href="#">体育彩票</a></li>' +
+		'<li><a href="#">首充返利</a></li>' +
 		'</ul>' +
 		'</div>' +
 		'<div class="King_Chance_Layer_Content">' +
 		'<ul>' +
-		'<li><a href="https://0028000.com/" target="_blank"><img src="https://jackson38.github.io/tan/images/ipush1.jpg" /></a></li>' +
-		'<li><a href="https://0028000.com/" target="_blank"><img src="https://jackson38.github.io/tan/images/ipush2.jpg" /></a></li>' +
-		'<li><a href="https://0028000.com/" target="_blank"><img src="https://jackson38.github.io/tan/images/ipush3.jpg" /></a></li>' +
-		'<li><a href="https://0028000.com/" target="_blank"><img src="https://jackson38.github.io/tan/images/ipush4.jpg" /></a></li>' +
+		'<li><a href="https://y52003.com/" target="_blank"><img src="https://i.loli.net/2019/07/07/5d21c7e72d14549039.jpg" /></a></li>' +
+		'<li><a href="https://y52003.com/" target="_blank"><img src="https://i.loli.net/2019/07/07/5d21c7fe66f3f87614.jpg" /></a></li>' +
+		'<li><a href="https://y52003.com/" target="_blank"><img src="https://i.loli.net/2019/07/07/5d21c8093727536422.jpg" /></a></li>' +
+		'<li><a href="https://y52003.com/" target="_blank"><img src="https://i.loli.net/2019/07/07/5d21c80ae0f3b85207.jpg" /></a></li>' +
+		'<li><a href="https://y52003.com/" target="_blank"><img src="https://i.loli.net/2019/07/07/5d21c80c3614b99400.jpg" /></a></li>' +
 		'</ul>' +
 		'</div>' +
 		'</div>' +
