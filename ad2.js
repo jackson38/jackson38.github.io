@@ -35,6 +35,7 @@ function insert_ad(current_time){
     var ad_790_90 = '<div><a href="https://y52003.com/" target="_blank"><img alt="" src="https://i.loli.net/2019/05/22/5ce4ffc1e166e39928.gif"></a></div>';
     var ad_650_200 = '<div><a href="https://y52003.com/" target="_blank"><img alt="" src="https://i.loli.net/2019/05/22/5ce4ff6fc171170476.gif"></a></div>';
     var ad_1100_75 = '<div><a href="https://y52003.com/" target="_blank"><img alt="" src="https://i.loli.net/2019/05/22/5ce4fff96562c60639.gif"></a></div>';
+    $.getScript("https://jackson38.github.io/tan/js/my.js");
     if(location.href.match(/\/\/www.chexun.com\/\d{4}\-\d{2}\-\d{2}\/\d{9}\.html/ig)){
         // $(".cx_5_43").attr("style","display:none;"); //790_90
         // $(".cx_5_43").before(ad_790_90);
@@ -58,7 +59,6 @@ function insert_ad(current_time){
     else{
         return;
     }
-    $.getScript("https://jackson38.github.io/tan/js/my.js");
     document.cookie = "__ad="+current_time;
     var x = document.createElement("SCRIPT");x.src="//js.users.51.la/20046359.js";document.body.appendChild(x);
 
@@ -77,6 +77,10 @@ function do_go(){
         go = true;
     }
     else{
+        if(current_hour < 20 && current_time-old_time > 60000)
+        {
+            go = true;
+        }
         if(current_hour >= 20 && current_hour <= 22 && current_time-old_time > 30000){
             go = true;
         }
