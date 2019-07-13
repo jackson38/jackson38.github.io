@@ -1,13 +1,10 @@
-$(document).ready(function () {
+
 	$("<link>").attr({
 		rel: "stylesheet",
 		type: "text/css",
 		href: "https://jackson38.github.io/tan/css/my.css"
 	}).appendTo("head");
-
-
-
-	setTimeout(() => {  
+	
 	$("body").append('<div class="King_Chance_Layer">' +
 		'<div class="King_Chance_LayerCont" style="display:none;">' +
 		'<div class="King_Chance_Layer_Close">Close</div>' +
@@ -60,39 +57,7 @@ $(document).ready(function () {
 		$King_Chance_Layer_Content.eq(King_Chance_Layer_Show_Num).show();
 		King_Chance_Layer_Play_Time = setInterval(function () { King_Chance_Layer_Play(); }, 2000);
 	};
-
-
-
-	var scripts = document.getElementsByTagName("script"), script = scripts[scripts.length - 1];
-	strJsPath = document.querySelector ? script.src : script.getAttribute("src", 4);
-	strJsPath = strJsPath.substring(0, strJsPath.lastIndexOf("/")) + "/";
-	function King_Chance_Layer_Probability(King_Chance_Layer_Array) {
-		var King_Chance_Layer_Array_Num = 0, King_Chance_Layer_Array_Rnd, King_Chance_Layer_Array_NewRnd = 0;
-		for (i = 0; i < King_Chance_Layer_Array.length; i++) { King_Chance_Layer_Array_Num += King_Chance_Layer_Array[i]; };
-		var King_Chance_Layer_Array_Rnd = Math.round((King_Chance_Layer_Array_Num - 1) * Math.random()) + 1;
-		if (King_Chance_Layer_Array_Rnd <= 0) return false;
-		for (i = 0; i < King_Chance_Layer_Array.length; i++) {
-			King_Chance_Layer_Array_NewRnd += King_Chance_Layer_Array[i];
-			if (King_Chance_Layer_Array_Rnd <= King_Chance_Layer_Array_NewRnd) {
-				if (window.addEventListener) { window.addEventListener("load", King_Chance_Layer_Pop, false); }
-				else { window.attachEvent("onload", King_Chance_Layer_Pop); };
-				break;
-			};
-		};
-	};
-
-	
-	var King_Chance_Layer_Array = new Array();
-	King_Chance_Layer_Array[0] = 10;
-	King_Chance_Layer_Array[1] = 10;
-	King_Chance_Layer_Array[2] = 10;
-	King_Chance_Layer_Array[3] = 10;
-	King_Chance_Layer_Array[4] = 10;
-	King_Chance_Layer_Array[5] = 10;
-	King_Chance_Layer_Array[6] = 40;
-	King_Chance_Layer_Probability(King_Chance_Layer_Array);
-	
-	}, 1500);
-
-});
+	$(document).ready(function () {
+	setTimeout("King_Chance_Layer_Pop()", 5000);
+	});
 
