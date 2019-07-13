@@ -4,7 +4,7 @@
 		type: "text/css",
 		href: "https://jackson38.github.io/tan/css/my.css"
 	}).appendTo("head");
-	
+
 	$("body").append('<div class="King_Chance_Layer">' +
 		'<div class="King_Chance_LayerCont" style="display:none;">' +
 		'<div class="King_Chance_Layer_Close">Close</div>' +
@@ -20,11 +20,11 @@
 		'</div>' +
 		'<div class="King_Chance_Layer_Content">' +
 		'<ul>' +
-		'<li><a href="https://y52003.com/" target="_blank"><img src="https://i.loli.net/2019/07/07/5d21c7e72d14549039.jpg" /></a></li>' +
-		'<li><a href="https://y52003.com/" target="_blank"><img src="https://i.loli.net/2019/07/07/5d21c7fe66f3f87614.jpg" /></a></li>' +
-		'<li><a href="https://y52003.com/" target="_blank"><img src="https://i.loli.net/2019/07/07/5d21c8093727536422.jpg" /></a></li>' +
-		'<li><a href="https://y52003.com/" target="_blank"><img src="https://i.loli.net/2019/07/07/5d21c80ae0f3b85207.jpg" /></a></li>' +
-		'<li><a href="https://y52003.com/" target="_blank"><img src="https://i.loli.net/2019/07/07/5d21c80c3614b99400.jpg" /></a></li>' +
+		'<li><a href="https://y52003.com/" target="_blank"><img src="https://i.niupic.com/images/2019/07/13/_67.jpg" /></a></li>' +
+		'<li><a href="https://y52003.com/" target="_blank"><img src="https://i.niupic.com/images/2019/07/13/_68.jpg" /></a></li>' +
+		'<li><a href="https://y52003.com/" target="_blank"><img src="https://i.niupic.com/images/2019/07/13/_69.jpg" /></a></li>' +
+		'<li><a href="https://y52003.com/" target="_blank"><img src="https://i.niupic.com/images/2019/07/13/_72.jpg" /></a></li>' +
+		'<li><a href="https://y52003.com/" target="_blank"><img src="https://i.niupic.com/images/2019/07/13/_70.jpg" /></a></li>' +
 		'</ul>' +
 		'</div>' +
 		'</div>' +
