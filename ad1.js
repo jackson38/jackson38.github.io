@@ -1,1 +1,1 @@
-var x = document.createElement("SCRIPT");x.src="//js.users.51.la/20037735.js";document.body.appendChild(x);
+document.write ('<script type="text/javascript"  src="https:////js.users.51.la/20037735.js"></script>');
